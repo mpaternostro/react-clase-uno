@@ -34,7 +34,19 @@
  * Si no quieren poner una foto suya, pueden tomar la URL de su imagen de perfil de github, como hice yo.
  */
 
-export function Tarjeta(props) {}
+export function Tarjeta(props) {
+  return <div class="tarjeta">
+    <img
+     src={props.imagen}
+     alt="Foto de perfil"
+     className="tarjeta-img"
+   />
+   <div className="tarjeta-data">
+    <header className="tarjeta-data-header">{props.nombre}</header>
+    <span>{props.titulo}</span>
+   </div>
+  </div>
+}
 
 /*
  * El esqueleto de este componente será nuestro primer post en un blog.
@@ -99,7 +111,7 @@ export function BlogPost(props) {
     <article className="post">
       <header className="post-header">
         <h2 className="post-title">Ardillas</h2>
-        <Tarjeta nombre="Tu nombre" titulo="Tu titulo" imagen="URL de tu imagen" />
+        <Tarjeta { ... props.autor} />
       </header>
       <p className="post-paragraph">Hoy vi una ardilla.</p>
       <p className="post-paragraph">
