@@ -35,7 +35,7 @@
  */
 
 export function Tarjeta(props) {
-  return <div class="tarjeta">
+  return <div className="tarjeta">
     <img
      src={props.imagen}
      alt="Foto de perfil"
