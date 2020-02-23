@@ -15,7 +15,7 @@ export function UncontrolledCheckbox(props) {
         <div>
             <input type='checkbox' id={props.name}
                    onChange={(event) => setSelected(event.target.checked)}
-                   checked={selected === true ? true : false} />
+                   checked={selected} />
             <label htmlFor={props.name}>{props.name}</label>
         </div>
     );
@@ -40,9 +40,7 @@ export function CheckboxList(props) {
     return (
         <div>
             {names.map((item, i) => (
-                <React.Fragment key={names[i]}>
-                    <UncontrolledCheckbox name={ names[i] } initialValue={ initialValues[i] }/>
-                </React.Fragment>
+                <UncontrolledCheckbox key={i} name={ names[i] } initialValue={ initialValues[i] }/>
             ))}
         </div>
     );

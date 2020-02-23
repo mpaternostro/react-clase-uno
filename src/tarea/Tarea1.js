@@ -106,21 +106,25 @@ Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
 
  */
 
+function Contenido(props) {
+  return (
+    <p className="post-paragraph">{props.parrafo}</p>
+  )
+}
+
 export function BlogPost(props) {
+  const parrafos = props.parrafos.split('\n');
   return (
     <article className="post">
       <header className="post-header">
-        <h2 className="post-title">Ardillas</h2>
+        <h2 className="post-title">{props.titulo}</h2>
         <Tarjeta { ... props.autor} />
       </header>
-      <p className="post-paragraph">Hoy vi una ardilla.</p>
-      <p className="post-paragraph">
-        La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y
-        encima andaba siempre en cuatro patas, moviendo la cola.
-      </p>
-      <p className="post-paragraph">
-        Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.
-      </p>
+      <div>
+        {parrafos.map((parrafo, i) => (
+          <Contenido key={ i } parrafo={ parrafo } />
+        ))}
+      </div>
     </article>
   );
 }

@@ -47,8 +47,7 @@ export function CheckboxListWithState(props) {
     return (
         <div>
             {names.map((item, i) => (
-                <React.Fragment key={names[i]}>
-                    <ControlledCheckbox name={ names[i] } value={ values[i] }
+                    <ControlledCheckbox key={ names[i] } name={ names[i] } value={ values[i] }
                                         onChange={ newState => {
                                             values[i] = newState;
                                             const entries = names.map((value, i) => {
@@ -57,7 +56,6 @@ export function CheckboxListWithState(props) {
                                             setState(Object.fromEntries(entries));
                                         }}
                      />
-                </React.Fragment>
             ))}
         </div>
     );
