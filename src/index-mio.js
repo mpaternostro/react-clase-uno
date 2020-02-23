@@ -19,7 +19,7 @@ import { BlogPost } from './tarea/Tarea1.js';
 //   document.getElementById('react-app')
 // );
 
-import { MatchNombre } from './tarea/Tarea2.js';
+import { MatchNombre, PasswordInput, ValidationInput } from './tarea/Tarea2.js';
 
 // ReactDOM.render(
 //   <MatchNombre
@@ -28,16 +28,12 @@ import { MatchNombre } from './tarea/Tarea2.js';
 //   document.querySelector('#react-app')
 // );
 
-import { PasswordInput } from './tarea/Tarea2.js';
-
 // ReactDOM.render(
 //   <PasswordInput
 //    minLength = {8}
 //    />,
 //    document.querySelector('#react-app')
 // );
-
-import { ValidationInput } from './tarea/Tarea2.js';
 
 // ReactDOM.render(
 //   <ValidationInput
@@ -67,23 +63,44 @@ import { ValidationInput } from './tarea/Tarea2.js';
 import { UncontrolledCheckbox, CheckboxList } from './tarea/Tarea3.js';
 
 // ReactDOM.render(
-//   <UncontrolledCheckbox
-//   name = 'Marcelo'
-//   initialValue = {false}
+  //   <UncontrolledCheckbox
+  //   name = 'uno'
+  //   initialValue = {false}
+  //   />,
+  //   document.querySelector('#react-app')
+  // );
+  
+  // ReactDOM.render(
+  //     <CheckboxList
+  //     items = {{
+  //         uno : false,
+  //         dos : true,
+  //         tres : false,
+  //       }}
+  //       />,
+  //       document.querySelector('#react-app')
+  //     );
+
+import { ControlledCheckbox, CheckboxListWithState } from './tarea/Tarea4.js';
+
+// ReactDOM.render(
+//   <ControlledCheckbox
+//   name = 'uno'
+//   value = {true}
 //   />,
 //   document.querySelector('#react-app')
 // );
 
 ReactDOM.render(
-  <CheckboxList
+  <CheckboxListWithState
   items = {{
-    uno : false,
-    dos : true,
-    tres : false,
+    uno: false,
+    dos: true,
+    tres: false,
   }}
   />,
   document.querySelector('#react-app')
-);
+)
 
 // import { Button } from './components/Button.js';
 
