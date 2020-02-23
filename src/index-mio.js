@@ -39,29 +39,50 @@ import { PasswordInput } from './tarea/Tarea2.js';
 
 import { ValidationInput } from './tarea/Tarea2.js';
 
-ReactDOM.render(
-  <ValidationInput
-    // 1. Password Validation
-    // validation = {((value) => {
-    //   if (value.length >= 8 && !value.match(' ')) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    //   })}
-    // isPassword = {true}
+// ReactDOM.render(
+//   <ValidationInput
+//     1. Password Validation
+//     validation = {((value) => {
+//       if (value.length >= 8 && !value.match(' ')) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//       })}
+//     isPassword = {true}
 
-    // 2. Mail Validation
-    validation = {((value) => {
-      if (value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-        return true;
-      } else {
-        return false;
-      }
-      })}
-    isPassword = {false}
-   />,
-   document.querySelector('#react-app')
+//     2. Mail Validation
+//     validation = {((value) => {
+//       if (value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//       })}
+//     isPassword = {false}
+//    />,
+//    document.querySelector('#react-app')
+// );
+
+import { UncontrolledCheckbox, CheckboxList } from './tarea/Tarea3.js';
+
+// ReactDOM.render(
+//   <UncontrolledCheckbox
+//   name = 'Marcelo'
+//   initialValue = {false}
+//   />,
+//   document.querySelector('#react-app')
+// );
+
+ReactDOM.render(
+  <CheckboxList
+  items = {{
+    uno : false,
+    dos : true,
+    tres : false,
+  }}
+  />,
+  document.querySelector('#react-app')
 );
 
 // import { Button } from './components/Button.js';
